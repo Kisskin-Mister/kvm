@@ -5,11 +5,11 @@ PiKVM guide
 перед тем как приступить, нам нужно закупиться, что нужно:
 - Raspberry Pi 4 (именно четверка, на пятой процессор не позволит, третья слабовата)
 - карта видеозахвата(подойдет простая за 800р)
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/2a410f4e-8bad-4f99-96b9-5f54ce76b9bc" />
+- <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/2a410f4e-8bad-4f99-96b9-5f54ce76b9bc" />
 - корпус с вентиляторами для Малинки(рекомендую, ибо устройство тУпАоХуЕеТ)
 - официальный блок питания
 - usb-c splitter (с поддержкой OTG и питанием, [ссылка](https://www.wildberries.ru/catalog/239103563/detail.aspx))
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/a110ec6a-c7bd-42c5-a80e-cc0298af6631" />
+- <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/a110ec6a-c7bd-42c5-a80e-cc0298af6631" />
 - HDMI провод
 - USB провод(не лоховской, не просто зарядный провод, отталкивайтесь от своего сплиттера, дальше поймешь почему, не задавай много вопросов)
 - microSD карта более чем 32Gb (ну и переходник, чтобы можно было загрузить ОС, это может быть что угодно, тут смотри как кайф)
@@ -38,14 +38,14 @@ PiKVM guide
 6. идем в браузер и вписываем айпи устройства в локальной сети (как узнать айпи, спроси у нейросети), если не получается по айпи, то может помочь такой адрес: `localhost.localdomain`
 7. и логин и пароль `admin` ([обязательно смени!](https://docs.pikvm.org/auth/#changing-the-kvm-password))
 8. всякие приседания с настройкой делаем в терминале, но а мы переходим в KVM
-  <img width="1259" height="1100" alt="Pasted image 20250806120715 1" src="https://github.com/user-attachments/assets/627556fc-57e4-46ca-8f59-350c18a1b6ca" />
+  - <img width="1259" height="1100" alt="Pasted image 20250806120715 1" src="https://github.com/user-attachments/assets/627556fc-57e4-46ca-8f59-350c18a1b6ca" />
 10. вуаля (VNC настроим ниже)
 
 ##### Небольшое отступление по софту
 
 - проверь, что у тебя все работает, у меня, например, не работали мышь и клава, потому что проблема оказалась в проводе от ноутбука, потому тут уже нужно подбирать, чтобы провод был функциональным
 - в настройках есть такая штука, как mouse jiggler - отличная вещь которая делает микро движение, чтобы экран не тух
-<img width="623" height="559" alt="Pasted image 20250806120538" src="https://github.com/user-attachments/assets/035c5dfc-d166-4630-bc51-f7347a383118" />
+  - <img width="623" height="559" alt="Pasted image 20250806120538" src="https://github.com/user-attachments/assets/035c5dfc-d166-4630-bc51-f7347a383118" />
 
 ### Настройка VNC и достпупа вне локальной сети
 
@@ -76,7 +76,7 @@ VNC (Virtual Network Computing) — это технология удалённо
 итак, у нас все готово, но как же подключаться вне сети?
 базовая схема такая:
 1. нужно устройство, которое также подключено в Tailscale, для этого нужно скачать прилу на машину (win, mac, ios, android, linux)
-<img width="835" height="479" alt="image" src="https://github.com/user-attachments/assets/01012dcd-9335-4e75-90ac-d45bed82f1c3" />
+  - <img width="835" height="479" alt="image" src="https://github.com/user-attachments/assets/01012dcd-9335-4e75-90ac-d45bed82f1c3" />
 2. далее можно спокойно пользоваться с браузера, подключаясь к впн через прилу (решение пиздатое, потому что внутрь сети есть возможность подключения прил и вроде как можно поднять что-угодно в докере)
 3. для iOS (на Android хз, ебитес с этим сами) лично у меня есть решение - это JumpDesktop (за него надо плОтить шекели капиталистам, один раз, не подписка слава б-гу), тк я им пользовался ранее для управления компом, для подключения нужно ввести айпи из Tailscale, выбрать режим VNC, ввести логин пароль и готово... НО!!!!
 
